@@ -1,0 +1,1 @@
+przykładowa zawartość
