@@ -15,4 +15,4 @@ addons:
 script: 
        - export CXX=g++-7
        - export CC=gcc-7
-       - cmake --build .  -- -j2
+       - make
