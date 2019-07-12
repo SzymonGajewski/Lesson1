@@ -1,16 +1,18 @@
+language: cpp
 dist: trusty
-language: cpp 
 os: linux
-compiler:
-        -gcc
 addons:
-        apt:
+         apt:
                 sources:
                         - ubuntu-toolchain-r-test
                 packages:
-                        - gcc-7
                         - g++-7
-                      
-script: 
+script:
         - CXX=/usr/bin/g++-7 C=/usr/bin/gcc-7 cmake .
         - cmake --build . -- -j2
+
+after_success:
+        - echo "success"
+
+after_failure:
+        - echo "failure"        
